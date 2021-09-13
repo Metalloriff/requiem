@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "./static/css/main.780c06a5.chunk.css",
+    "main.js": "./static/js/main.7547b01b.chunk.js",
+    "main.js.map": "./static/js/main.7547b01b.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.11bb0bcf.js",
+    "runtime-main.js.map": "./static/js/runtime-main.11bb0bcf.js.map",
+    "static/js/2.4a1a282e.chunk.js": "./static/js/2.4a1a282e.chunk.js",
+    "static/js/2.4a1a282e.chunk.js.map": "./static/js/2.4a1a282e.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.780c06a5.chunk.css.map": "./static/css/main.780c06a5.chunk.css.map",
+    "static/js/2.4a1a282e.chunk.js.LICENSE.txt": "./static/js/2.4a1a282e.chunk.js.LICENSE.txt",
+    "static/media/Chevron.c3ee4024.svg": "./static/media/Chevron.c3ee4024.svg",
+    "static/media/TwemojiHeart.a32c5071.svg": "./static/media/TwemojiHeart.a32c5071.svg",
+    "static/media/background.305330f6.mp4": "./static/media/background.305330f6.mp4",
+    "static/media/ocean.1b19a367.ogg": "./static/media/ocean.1b19a367.ogg",
+    "static/media/ocean.82bb8061.svg": "./static/media/ocean.82bb8061.svg",
+    "static/media/ocean.cf7c4caf.webm": "./static/media/ocean.cf7c4caf.webm",
+    "static/media/rain.2eb2ced2.wav": "./static/media/rain.2eb2ced2.wav",
+    "static/media/rain.94106e73.svg": "./static/media/rain.94106e73.svg",
+    "static/media/rain.96fa9739.webm": "./static/media/rain.96fa9739.webm",
+    "static/media/thunderstorm.1bf45d37.wav": "./static/media/thunderstorm.1bf45d37.wav",
+    "static/media/thunderstorm.8ce81285.svg": "./static/media/thunderstorm.8ce81285.svg",
+    "static/media/thunderstorm.c86dc4f0.mp4": "./static/media/thunderstorm.c86dc4f0.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.11bb0bcf.js",
+    "static/js/2.4a1a282e.chunk.js",
+    "static/css/main.780c06a5.chunk.css",
+    "static/js/main.7547b01b.chunk.js"
+  ]
+}

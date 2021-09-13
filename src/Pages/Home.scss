@@ -1,0 +1,59 @@
+@import "../Variables.scss";
+
+.HomePage {
+	display: flex;
+	flex-direction: column;
+	
+	min-height: 100vh;
+	
+	.Background {
+		position: fixed;
+		top: 0; left: 0; bottom: 0; right: 0;
+
+		z-index: -1;
+		filter: blur(7px);
+		
+		video {
+			position: fixed;
+			width: 100%; height: 100%;
+			
+			object-fit: cover;
+			object-position: center;
+			
+			&.Target {
+				opacity: 0;
+				
+				z-index: 5;
+			}
+			
+			&.Transitioning {
+				animation-name: bgTransition;
+				animation-duration: 500ms;
+				animation-fill-mode: forwards;
+
+				@keyframes bgTransition {
+					to {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	
+	.SoundCards {
+		margin: auto 10vw;
+		
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		
+		grid-template-columns: repeat(auto-fit, 250px);
+		grid-gap: 40px;
+		
+		padding: 100px 0;
+	}
+}
+
+footer {
+	backdrop-filter: blur(50px);
+}

@@ -1,0 +1,16 @@
+﻿@import "../Variables";
+
+.LicensesPage {
+	flex-direction: column;
+	text-align: center;
+	
+	margin: 0 10vw;
+	
+	.LicenseItem {
+		margin: 20px 0;
+		
+		h2 {
+			text-transform: uppercase;
+		}
+	}
+}

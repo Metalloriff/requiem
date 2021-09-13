@@ -1,0 +1,38 @@
+{
+  "defaultBackground": {
+    "video": {
+      "title": "Kelly Lacy",
+      "link": "https://www.pexels.com/@kelly-lacy-1179532?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
+    }
+  },
+  "rain": {
+    "audio": {
+      "title": "MixKit.co",
+      "link": "https://mixkit.co/free-sound-effects/"
+    },
+    "video": {
+      "title": "Free Creative Stuff",
+      "link": "https://www.pexels.com/@freecreativestuff?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
+    }
+  },
+  "thunderstorm": {
+    "audio": {
+      "title": "MixKit.co",
+      "link": "https://mixkit.co/free-sound-effects/"
+    },
+    "video": {
+      "title": "Magda Ehlers",
+      "link": "https://www.pexels.com/@magda-ehlers-pexels?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
+    }
+  },
+  "ocean": {
+    "audio": {
+      "title": "Moon Light",
+      "link": "https://www.youtube.com/channel/UCY4B-rzNZqcJPWKFkbAgWoA"
+    },
+    "video": {
+      "title": "Alexandr Podvalny",
+      "link": "https://www.pexels.com/@freestockpro?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
+    }
+  }
+}
