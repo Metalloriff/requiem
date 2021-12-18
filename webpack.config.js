@@ -29,7 +29,7 @@ module.exports = env => ({
 		filename: "assets/scripts/[name].js",
 		chunkFilename: "assets/scripts/[name].js",
 		assetModuleFilename: "assets/media/[name][ext]",
-		publicPath: "/"
+		publicPath: "/reqiuem/"
 	},
 	module: {
 		rules: [
