@@ -1,13 +1,13 @@
 @import "./Variables.scss";
 
 :root {
-	--primary-color: var(--cf-acc0);
-	--secondary-color: var(--cf-acc1);
-	
+	--primary-color: #f84b79;
+	--secondary-color: #4b6ef8;
+
 	--primary-bg: var(--cf-bg0);
 	--secondary-bg: var(--cf-bg1);
 	--tertiary-bg: var(--cf-bg2);
-	
+
 	--primary-border-radius: 0;
 	--secondary-border-radius: var(--cf-br1);
 	--txt-color: var(--cf-txt0);
@@ -40,7 +40,8 @@ body {
 	scrollbar-color: $primaryColor rgba(black, 0.1);
 }
 
-.App, .Main {
+.App,
+.Main {
 	min-height: 100vh;
 }
 
@@ -55,7 +56,7 @@ body {
 	border-radius: 10px;
 }
 
-a:Not(.LinkWrapper) {
+a:not(.LinkWrapper) {
 	color: $primaryColor;
 	text-decoration: none;
 	font-weight: bold;
@@ -64,10 +65,10 @@ a:Not(.LinkWrapper) {
 .NotSupported {
 	flex-direction: column;
 	text-align: center;
-	
+
 	margin: 0 10vw;
 	margin-top: 20vh;
-	
+
 	a {
 		margin-left: 5px;
 	}
