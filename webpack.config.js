@@ -146,7 +146,7 @@ module.exports = env => ({
 			display: "standalone",
 
 			fingerprints: false,
-			publicPath: "."
+			publicPath: "/requiem/"
 		})
 	].filter(plugin => plugin),
 	devServer: {
