@@ -9,6 +9,10 @@ import PageFooter from "./Components/PageElements/PageFooter";
 import Toasts from "./Components/Toasts";
 import HomePage from "./Pages/Home";
 import LicensesPage from "./Pages/LicensesPage";
+import Config from "./Classes/Config";
+import { Moon, DollarSign } from "react-feather";
+
+Config.load();
 
 window.addEventListener("popstate", () => {
 	PageElement.forceUpdate?.();
@@ -17,34 +21,6 @@ window.addEventListener("popstate", () => {
 function PageElement() {
 	const [, forceUpdate] = React.useReducer(x => x + 1, 0);
 	PageElement.forceUpdate = forceUpdate;
-
-	if (~navigator.userAgent.indexOf("Firefox")) {
-		// return (
-		// 	<div className="NotSupported FlexCenter">
-		// 		<h1>UNSUPPORTED BROWSER</h1>
-
-		// 		<h3>
-		// 			Due to Firefox's limitations and
-		// 			lack of support for modern web features,
-		// 			it is not supported.
-		// 		</h3>
-
-		// 		<h3>
-		// 			Please upgrade your browser to any
-		// 			chromium-powered browser.
-		// 		</h3>
-
-		// 		<h3>
-		// 			Examples -
-		// 			<a href="https://www.google.com/chrome/">Chrome</a>,
-		// 			<a href="https://www.opera.com/download">Opera</a>,
-		// 			<a href="https://www.opera.com/gx">Opera GX</a>,
-		// 			<a href="https://brave.com/download/">Brave</a>,
-		// 			<a href="https://www.microsoft.com/en-us/edge">Edge</a>
-		// 		</h3>
-		// 	</div>
-		// );
-	}
 
 	// Store the formatted hash in a variable.
 	const [hash, ...args] = (window.location.hash
@@ -66,10 +42,56 @@ export default function App() {
 	const isMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 	const [, forceUpdate] = React.useReducer(x => x + 1, 0);
 
+	const [sleeping, setSleeping] = React.useState(false);
+
+	React.useEffect(() => {
+		let sleepTimeout;
+
+		const handleSleep = () => {
+			setSleeping(true);
+		};
+
+		const resetSleep = () => {
+			setSleeping(false);
+
+			clearTimeout(sleepTimeout);
+			sleepTimeout = setTimeout(handleSleep, 1000 * 30);
+		};
+
+		window.addEventListener("mousemove", resetSleep);
+		window.addEventListener("scroll", resetSleep);
+		window.addEventListener("click", resetSleep);
+		window.addEventListener("keydown", resetSleep);
+
+		return () => {
+			window.removeEventListener("mousemove", resetSleep);
+			window.removeEventListener("scroll", resetSleep);
+			window.removeEventListener("click", resetSleep);
+			window.removeEventListener("keydown", resetSleep);
+		};
+	}, []);
+
 	return (
 		<div className={joinClassNames("App", isMobile ? "Mobile" : "Desktop")}>
-			<div className="Main">
+			<div className={joinClassNames("Main", [sleeping, "Sleeping"])}>
 				<PageElement />
+
+				<div className="PopupContainer FlexCenter AbsoluteCover">
+					<div className="Popup FlexCenter">
+						<Moon className="Icon"/>
+
+						<h2>Rest well...</h2>
+					</div>
+
+					<div className="Popup DonatePopup FlexCenter">
+						<DollarSign className="Icon"/>
+
+						<div>
+							<h2>If you enjoy this web app, please consider donating.</h2>
+							<h2>Your contributions help me continue making free things just like this!</h2>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<PageFooter />

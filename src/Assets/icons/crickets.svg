@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="133.33333px" height="133.33333px" viewBox="0 0 133.33333 133.33333" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M133.333 0L133.333 0L133.333 133.333L0 133.333L0 0L133.333 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="ocean" clip-path="url(#clip_1)">
+    <path d="M133.333 0L133.333 0L133.333 133.333L0 133.333L0 0L133.333 0Z" id="ocean" fill="none" stroke="none" />
+    <path d="M84.6667 92.6667L77.5849 92.6667L73.6667 84.0466" id="Vector-3-Copy" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M88.6667 92.2867L81.5849 92.2867L77.6667 83.6667" id="Vector-3-Copy-2" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M55.6666 64.6667L48.6667 51.6667L43.8398 65.2854" id="Vector-2-Copy-2" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M60.1667 68.6667L53.1667 55.6667L39.1667 95.1667L30.6667 95.1667" id="Vector-2-Copy" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M28.4667 69.6667C25.5173 66.4706 44.4192 65.707 60.5693 64.682C76.7193 63.657 82.4925 59.0705 83.6668 59.1667C84.8411 59.2629 84.6918 74.9918 83.6668 76.6668C82.6418 78.3419 82.117 83.8168 65.9669 84.6668C49.8168 85.5168 31.4161 72.8629 28.4667 69.6667Z" id="Vector" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" />
+    <path d="M39.4449 77.6852L34.6667 91.1666L26.1667 91.1666" id="Vector-2" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M91.6667 58.6667C91.6667 58.6667 85.6232 35.5087 109.667 37.1666" id="Vector-4-Copy" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" />
+    <path d="M89.3854 60.4713C88.6104 62.2013 87.8904 72.1513 89.3854 73.4713C90.8805 74.7913 96.5104 75.7213 98.8855 72.4713C101.26 69.2213 101.26 63.4713 98.8855 60.4713C96.5104 57.4713 90.1604 58.7413 89.3854 60.4713Z" id="Vector-3" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" />
+    <path d="M94.6667 58.6667C94.6667 58.6667 91.4232 42.0087 110.667 31.6667" id="Vector-4" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" />
+  </g>
+</svg>

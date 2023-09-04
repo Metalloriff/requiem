@@ -29,7 +29,7 @@ module.exports = env => ({
 		filename: "assets/scripts/[name].js",
 		chunkFilename: "assets/scripts/[name].js",
 		assetModuleFilename: "assets/media/[name][ext]",
-		publicPath: "/requiem/"
+		publicPath: "/"
 	},
 	module: {
 		rules: [
@@ -101,6 +101,7 @@ module.exports = env => ({
 		new HtmlWebpackPlugin({
 			filename: "index.html",
 			template: path.join(__dirname, "public/index.html"),
+			display: "fullscreen",
 			meta: {
 				"charset": "utf-8",
 				"viewport": "width=device-width, initial-scale=1",
@@ -121,7 +122,7 @@ module.exports = env => ({
 				minifyCSS: true,
 				minifyURLs: true
 			},
-			// favicon: path.join(__dirname, "public", "favicon.ico"),
+			favicon: path.join(__dirname, "public", "favicon.ico"),
 			title: config.name
 		}),
 		env.mode === "production" && new MiniCssExtractPlugin({
@@ -138,15 +139,15 @@ module.exports = env => ({
 			description: config.description,
 			background_color: "#2c3946",
 			crossorigin: null,
-			// icons: [{
-			// 	src: path.resolve(__dirname, "public", "logo512.png"),
-			// 	sizes: [96, 128, 192, 256, 384, 512]
-			// }],
+			icons: [{
+				src: path.resolve(__dirname, "public", "logo512.png"),
+				sizes: [96, 128, 192, 256, 384, 512]
+			}],
 			"theme-color": config.color,
 			display: "standalone",
 
 			fingerprints: false,
-			publicPath: "/requiem/"
+			publicPath: "/"
 		})
 	].filter(plugin => plugin),
 	devServer: {

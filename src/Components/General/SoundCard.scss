@@ -38,8 +38,32 @@
 	}
 
 	.SliderContainer {
+		position: relative;
 		gap: 5px;
 		width: 100%;
+
+		pointer-events: none;
+	}
+
+	.SliderElement {
+		position: absolute;
+		top: -6px;
+
+		appearance: none;
+		border: none;
+		outline: none;
+
+		background-color: rgba(black, 0.2);
+
+		height: 16px;
+		padding: 0;
+
+		width: 100%;
+		border-radius: 100px;
+
+		opacity: 0;
+		pointer-events: all;
+		z-index: 1000;
 	}
 
 	.Slider {
@@ -57,18 +81,16 @@
 		width: 100%;
 		border-radius: 100px;
 
-		&::-webkit-slider-thumb {
-			appearance: none;
-
+		.SliderKnob {
 			background-color: white;
 			width: 15px;
 			height: 15px;
 			border-radius: 100px;
 			cursor: pointer;
+			transform: translateX(calc(var(--value) * 10.5)) translateY(-4px);
 		}
 
-		&::before {
-			content: "";
+		.SliderProgress {
 			position: absolute;
 
 			z-index: -1;
@@ -93,6 +115,22 @@
 			height: 40px;
 
 			stroke-width: 1.5px;
+
+			&.Spin {
+				animation-name: Spinner;
+				animation-duration: 700ms;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes Spinner {
+				from {
+					transform: rotateZ(0deg);
+				}
+				to {
+					transform: rotateZ(360deg);
+				}
+			}
 		}
 	}
 
@@ -100,10 +138,11 @@
 	transition: transform $ft;
 
 	&:hover {
-		transform: scale(1.02);
+		// HOLY SHIT CAN WE JUST ACCEPT THAT FIREFOX IS NOT A VALID BROWSER
+		transform: scale(1.02) rotate(0.0001deg);
 	}
 
 	&:active {
-		transform: scale(0.98);
+		transform: scale(0.98) rotate(0.0001deg);
 	}
 }

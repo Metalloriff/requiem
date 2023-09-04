@@ -1,38 +1,17 @@
 {
-  "defaultBackground": {
-    "video": {
-      "title": "Kelly Lacy",
-      "link": "https://www.pexels.com/@kelly-lacy-1179532?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
-    }
-  },
-  "rain": {
-    "audio": {
-      "title": "MixKit.co",
-      "link": "https://mixkit.co/free-sound-effects/"
-    },
-    "video": {
-      "title": "Free Creative Stuff",
-      "link": "https://www.pexels.com/@freecreativestuff?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
-    }
-  },
-  "thunderstorm": {
-    "audio": {
-      "title": "MixKit.co",
-      "link": "https://mixkit.co/free-sound-effects/"
-    },
-    "video": {
-      "title": "Magda Ehlers",
-      "link": "https://www.pexels.com/@magda-ehlers-pexels?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
-    }
-  },
-  "ocean": {
-    "audio": {
-      "title": "Moon Light",
-      "link": "https://www.youtube.com/channel/UCY4B-rzNZqcJPWKFkbAgWoA"
-    },
-    "video": {
-      "title": "Alexandr Podvalny",
-      "link": "https://www.pexels.com/@freestockpro?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"
-    }
-  }
+	"credits": [
+		"https://pixabay.com/sound-effects/",
+		"https://mixkit.co/free-sound-effects/",
+		"https://www.pexels.com/@kelly-lacy-1179532?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels",
+		"https://www.pexels.com/@freecreativestuff?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels",
+		"https://www.pexels.com/@magda-ehlers-pexels?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels",
+		"https://www.youtube.com/channel/UCY4B-rzNZqcJPWKFkbAgWoA",
+		"https://www.pexels.com/@freestockpro?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels",
+		"https://pixabay.com/videos/black-black-friday-background-loop-13495/",
+		"https://pixabay.com/videos/magic-loop-looping-perfect-forest-42197/",
+		"https://pixabay.com/videos/crescent-moon-clouds-night-kids-27186/",
+		"https://pixabay.com/videos/background-beautiful-celebration-13949/",
+		"https://pixabay.com/videos/perfect-loop-fish-background-blue-24103/",
+		"https://pixabay.com/videos/moon-rotation-loop-craters-heaven-44335/"
+	]
 }

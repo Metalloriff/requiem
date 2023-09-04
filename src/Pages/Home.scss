@@ -14,7 +14,7 @@
 		right: 0;
 
 		z-index: -1;
-		filter: blur(7px);
+		filter: blur(7px) brightness(1);
 
 		video {
 			position: fixed;
@@ -44,7 +44,7 @@
 		}
 	}
 
-	.SoundCards {
+	.SoundCards, .BackgroundCards {
 		margin: auto 10vw;
 
 		display: grid;
@@ -55,6 +55,12 @@
 		grid-gap: 40px;
 
 		padding: 100px 0;
+	}
+
+	.Title {
+		margin: auto;
+		text-align: center;
+		margin-top: 10vh;
 	}
 }
 

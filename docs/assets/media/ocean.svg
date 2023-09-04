@@ -1,1 +1,29 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!-- Generator: Gravit.io --><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="0 0 100 100" width="100pt" height="100pt"><defs><clipPath id="_clipPath_0UJj83y0QHpHLj8yh5eIelFoGGATMwOx"><rect width="100" height="100"/></clipPath></defs><g clip-path="url(#_clipPath_0UJj83y0QHpHLj8yh5eIelFoGGATMwOx)"><rect width="100" height="100" style="fill:rgb(0,0,0)" fill-opacity="0"/><g><mask id="_mask_lpHF811ty9Xy6pKnkrK4WgtobcPyPJKd"><path d=" M 48.665 65.965 C 49.107 65.987 49.552 66 50 66 C 62.694 66 73 55.694 73 43 C 73 30.306 62.694 20 50 20 C 37.306 20 27 30.306 27 43 C 27 49.9 30.045 56.094 34.863 60.312 Q 36.482 59.974 38 59.983 C 42.565 60.013 45.297 63.373 48.665 65.965 Z " fill-rule="evenodd" fill="white" stroke="none"/></mask><path d=" M 48.665 65.965 C 49.107 65.987 49.552 66 50 66 C 62.694 66 73 55.694 73 43 C 73 30.306 62.694 20 50 20 C 37.306 20 27 30.306 27 43 C 27 49.9 30.045 56.094 34.863 60.312 Q 36.482 59.974 38 59.983 C 42.565 60.013 45.297 63.373 48.665 65.965 Z " fill-rule="evenodd" fill="none"/><path d=" M 48.665 65.965 C 49.107 65.987 49.552 66 50 66 C 62.694 66 73 55.694 73 43 C 73 30.306 62.694 20 50 20 C 37.306 20 27 30.306 27 43 C 27 49.9 30.045 56.094 34.863 60.312 Q 36.482 59.974 38 59.983 C 42.565 60.013 45.297 63.373 48.665 65.965 Z " fill-rule="evenodd" fill="none" mask="url(#_mask_lpHF811ty9Xy6pKnkrK4WgtobcPyPJKd)" vector-effect="non-scaling-stroke" stroke-width="6" stroke="rgb(235,235,235)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><path d=" M 24 63.983 Q 30.664 58.937 38 58.983 C 45.336 59.03 47.938 67.679 56 67.983 Q 64.063 68.288 71 62.983" fill="none" vector-effect="non-scaling-stroke" stroke-width="3" stroke="rgb(235,235,235)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><path d=" M 29 79.983 Q 35.664 74.937 43 74.983 C 50.336 75.03 52.937 83.679 61 83.983 Q 69.063 84.288 76 78.983" fill="none" vector-effect="non-scaling-stroke" stroke-width="3" stroke="rgb(235,235,235)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><path d=" M 85 71 Q 78.336 65.954 71 66 C 63.664 66.047 58.063 72.695 50 73 Q 41.938 73.305 36 70" fill="none" vector-effect="non-scaling-stroke" stroke-width="3" stroke="rgb(235,235,235)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/><path d=" M 16 85.983 Q 22.664 80.937 30 80.983 C 37.336 81.03 39.938 89.679 48 89.983 Q 56.063 90.288 63 84.983" fill="none" vector-effect="non-scaling-stroke" stroke-width="3" stroke="rgb(235,235,235)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="133.33333px" height="133.33333px" viewBox="0 0 133.33333 133.33333" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M133.333 0L133.333 0L133.333 133.333L0 133.333L0 0L133.333 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="ocean" clip-path="url(#clip_1)">
+    <path d="M133.333 0L133.333 0L133.333 133.333L0 133.333L0 0L133.333 0Z" id="ocean" fill="none" stroke="none" />
+    <path d="M23.6665 101.167C23.6665 101.167 32.2915 94.6667 40.6665 94.6667C49.0416 94.6667 51.4165 101.167 60.1666 101.167C68.9167 101.167 75.6665 96.1667 75.6665 96.1667" id="Vector-Copy-3" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M46.6666 94.1667C46.6666 94.1667 55.2916 87.6667 63.6666 87.6667C72.0417 87.6667 74.4166 94.1667 83.1666 94.1667C91.9168 94.1667 98.6666 89.1667 98.6666 89.1667" id="Vector-Copy-2" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <g id="Group-Copy-2" transform="matrix(0.9659258 -0.25881898 0.25881898 0.9659258 11.566566 74.28748)">
+      <path d="M0 1L13.5825 1" id="Vector-5-Copy" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" />
+      <path d="M97 1L110.583 1" id="Vector-5" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" />
+    </g>
+    <path d="M25.6667 84.1667C25.6667 84.1667 34.2917 77.6667 42.6667 77.6667C51.0418 77.6667 53.4167 84.1667 62.1667 84.1667C70.9169 84.1667 77.6667 79.1667 77.6667 79.1667" id="Vector-Copy" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M66.6667 87.1667C66.6667 87.1667 75.2916 80.6667 83.6667 80.6667C92.0418 80.6667 94.4167 87.1667 103.167 87.1667C111.917 87.1667 118.667 82.1667 118.667 82.1667" id="Vector" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <g id="Group-Copy" transform="matrix(0.9659258 0.25881898 -0.25881898 0.9659258 12.644482 45.39023)">
+      <path d="M0 1L13.5825 1" id="Vector-5-Copy" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" />
+      <path d="M97 1L110.583 1" id="Vector-5" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" />
+    </g>
+    <path d="M40.6667 77.6667C28.2666 65.0413 33.153 25.1667 66.6667 25.1667C100.18 25.1667 107.992 67.6425 88.667 82.1677" id="Vector-4" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" />
+    <g id="Group" transform="translate(10.08416 59.666622)">
+      <path d="M0 1L13.5825 1" id="Vector-5-Copy" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" />
+      <path d="M97 1L110.583 1" id="Vector-5" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" />
+    </g>
+  </g>
+</svg>

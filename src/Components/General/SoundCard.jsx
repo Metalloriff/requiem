@@ -1,7 +1,7 @@
 ﻿import React from "react";
-import { BarChart, PlayCircle, StopCircle, Volume2 } from "react-feather";
+import { BarChart, MinusCircle, PlayCircle, StopCircle, Volume2 } from "react-feather";
+import Config from "../../Classes/Config";
 import { lerp } from "../../Classes/Constants";
-import HomePage from "../../Pages/Home";
 import Tooltip from "../Tooltip";
 import "./SoundCard.scss";
 
@@ -9,20 +9,42 @@ function tween(start, end, time) {
 	return start + (end - start) * time;
 }
 
-export default function SoundCard({ id, name, audio, video, Icon, colors = [] }) {
+let hasInteracted = false;
+
+function interactEvent() {
+	hasInteracted = true;
+	window.removeEventListener("click", interactEvent);
+}
+
+window.addEventListener("click", interactEvent);
+
+export default function SoundCard({ id, name, audio, Icon, colors = [] }) {
 	const [isPlaying, setPlaying] = React.useState(false);
+	const [isLoading, setLoading] = React.useState(false);
 	const [isTransitioningVolume, setTransitioningVolume] = React.useState(false);
 
-	const playerRef = React.useRef();
 	const volumeRef = React.useRef();
 	const distanceRef = React.useRef();
 
-	const [filter, initFilter] = React.useState(null);
 	const [distance, setDistance] = React.useState(0);
 
+	const [context, setContext] = React.useState(null);
+	const [source, setSource] = React.useState(null);
+	const [filter, setFilter] = React.useState(null);
+	const [gainNode, setGainNode] = React.useState(null);
+
 	React.useEffect(() => {
-		if (localStorage.getItem(`play_state_${id}`) === "true") {
-			events.togglePlayState();
+		const context = new AudioContext();
+		const source = context.createBufferSource();
+		setContext(context);
+		setSource(source);
+
+		if (Config.getItem(`currentState.${id}.isPlaying`)) {
+			new Promise(async () => {
+				while (!hasInteracted) await new Promise(r => setTimeout(r, 200));
+
+				events.togglePlayState();
+			});
 		}
 
 		events.onVolumeChange({
@@ -32,21 +54,79 @@ export default function SoundCard({ id, name, audio, video, Icon, colors = [] })
 		events.onDistanceChange({
 			target: distanceRef.current
 		});
+
+		return () => {
+			if (context.state === "running") {
+				try {
+					source.stop();
+				}
+				catch (e) { }
+			}
+		};
 	}, []);
 
 	React.useEffect(() => {
-		if (!isPlaying) return;
+		Config.setItem(`currentState.${id}.isPlaying`, isPlaying);
 
-		const context = new AudioContext();
-		const source = context.createMediaElementSource(playerRef.current);
-		const filter = context.createBiquadFilter();
+		if (!isPlaying) {
+			if (gainNode) {
+				setTransitioningVolume(true);
+				lerp(1000, mult => {
+					gainNode.gain.value =
+						(volumeRef.current.value / 100) * (
+							isPlaying
+								? mult
+								: 1 - mult
+						);
+				}).then(() => {
+					setTransitioningVolume(false);
 
-		filter.type = "lowpass";
+					source.stop();
+				});
+			}
 
-		initFilter(filter);
+			return;
+		}
 
-		source.connect(filter);
-		filter.connect(context.destination);
+		new Promise(async () => {
+			setLoading(true);
+
+			const buffer = await fetch(audio).then(r => r.arrayBuffer());
+			const audioBuffer = await new Promise(r => context.decodeAudioData(buffer, r));
+			const filter = context.createBiquadFilter();
+			const gainNode = context.createGain();
+
+			source.buffer = audioBuffer;
+			source.loop = true;
+
+			filter.type = "lowpass";
+
+			gainNode.connect(filter);
+			filter.connect(context.destination);
+			source.connect(gainNode);
+
+			setFilter(filter);
+			setGainNode(gainNode);
+
+			gainNode.gain.value = 0;
+
+			source.start();
+
+			setLoading(false);
+			setTransitioningVolume(true);
+			lerp(1000, mult => {
+				if (volumeRef.current) {
+					gainNode.gain.value =
+						(volumeRef.current.value / 100) * (
+							isPlaying
+								? mult
+								: 1 - mult
+						);
+				}
+			}).then(() => {
+				setTransitioningVolume(false);
+			});
+		}).catch(console.error);
 	}, [isPlaying]);
 
 	React.useEffect(() => {
@@ -58,50 +138,28 @@ export default function SoundCard({ id, name, audio, video, Icon, colors = [] })
 	}, [filter, distance]);
 
 	const events = {
-		focusBackground: () => {
-			HomePage.setBackground(video);
-		},
 		togglePlayState: () => {
 			if (isTransitioningVolume) return;
 
 			setPlaying(!isPlaying);
-			setTransitioningVolume(true);
-
-			!isPlaying && playerRef.current.play();
-
-			lerp(1000, mult => {
-				playerRef.current.volume =
-					(volumeRef.current.value / 100) * (
-						isPlaying
-							? 1 - mult
-							: mult
-					);
-			}).then(() => {
-				setTransitioningVolume(false);
-
-				isPlaying && playerRef.current.pause();
-
-				localStorage.setItem(`play_state_${id}`, !isPlaying);
-			});
 		},
 		onVolumeChange: e => {
-			playerRef.current.volume = e.target.value / 100;
-			e.target.style = `--value: ${e.target.value}%`;
+			if (gainNode) gainNode.gain.value = e.target.value / 100;
+			e.target.parentElement.style = `--value: ${e.target.value}%`;
 
-			localStorage.setItem(`volume_state_${id}`, e.target.value);
+			Config.setItem(`currentState.${id}.volume`, e.target.value);
 		},
 		onDistanceChange: e => {
 			setDistance(e.target.value);
-			e.target.style = `--value: ${e.target.value}%`;
+			e.target.parentElement.style = `--value: ${e.target.value}%`;
 
-			localStorage.setItem(`distance_state_${id}`, e.target.value);
+			Config.setItem(`currentState.${id}.distance`, e.target.value);
 		}
 	};
 
 	return (
 		<div
 			className="SoundCard"
-			onClick={events.focusBackground}
 			style={{
 				"--primary-color": colors[0],
 				"--secondary-color": colors[1]
@@ -110,13 +168,6 @@ export default function SoundCard({ id, name, audio, video, Icon, colors = [] })
 			<Icon className="Icon" />
 
 			<h3 className="Name">{name}</h3>
-
-			<audio
-				ref={playerRef}
-				src={audio}
-				style={{ display: "none" }}
-				loop
-			/>
 
 			<div className="SliderContainer FlexCenter">
 				<div>
@@ -127,20 +178,25 @@ export default function SoundCard({ id, name, audio, video, Icon, colors = [] })
 					</Tooltip>
 				</div>
 
-				<input
-					ref={volumeRef}
-					className="Slider"
-					type="range"
-					defaultValue={
-						parseInt(
-							localStorage.getItem(`volume_state_${id}`) ?? 50
-						)
-					}
-					min={0} max={100}
-					step={1}
+				<div className="Slider">
+					<div className="SliderProgress" />
+					<div className="SliderKnob" />
 
-					onInput={events.onVolumeChange}
-				/>
+					<input
+						ref={volumeRef}
+						className="SliderElement"
+						type="range"
+						defaultValue={
+							parseInt(
+								Config.getItem(`currentState.${id}.volume`) ?? 50
+							)
+						}
+						min={0} max={100}
+						step={1}
+
+						onInput={events.onVolumeChange}
+					/>
+				</div>
 			</div>
 
 			<div className="SliderContainer FlexCenter">
@@ -152,24 +208,31 @@ export default function SoundCard({ id, name, audio, video, Icon, colors = [] })
 					</Tooltip>
 				</div>
 
-				<input
-					ref={distanceRef}
-					className="Slider"
-					type="range"
-					defaultValue={
-						parseInt(
-							localStorage.getItem(`distance_state_${id}`) ?? 0
-						)
-					}
-					min={0} max={100}
-					step={1}
+				<div className="Slider">
+					<div className="SliderProgress" />
+					<div className="SliderKnob" />
 
-					onInput={events.onDistanceChange}
-				/>
+					<input
+						ref={distanceRef}
+						className="SliderElement"
+						type="range"
+						defaultValue={
+							parseInt(
+								Config.getItem(`currentState.${id}.distance`) ?? 0
+							)
+						}
+						min={0} max={100}
+						step={1}
+
+						onInput={events.onDistanceChange}
+					/>
+				</div>
 			</div>
 
 			<div className="PlayButton FlexCenter" onClick={events.togglePlayState}>
-				{isPlaying ? <StopCircle /> : <PlayCircle />}
+				{isLoading
+					? <MinusCircle className="Spin" />
+					: isPlaying ? <StopCircle /> : <PlayCircle />}
 			</div>
 		</div>
 	)

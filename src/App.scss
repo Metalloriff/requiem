@@ -45,6 +45,72 @@ body {
 	min-height: 100vh;
 }
 
+.App .Main {
+	.Background {
+		transition: filter 2s ease-in-out;
+	}
+
+	.Foreground {
+		transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+	}
+
+	&.Sleeping {
+		.Background {
+			filter: blur(0) brightness(0.3);
+		}
+
+		.Foreground {
+			opacity: 0;
+			transform: scale(0.98);
+		}
+
+		.Popup {
+			animation-name: sleep-popup-anim;
+		}
+	}
+
+	.Popup {
+		position: fixed;
+		bottom: 20px;
+		background: rgba(black, 0.8);
+		backdrop-filter: blur(20px);
+		border-radius: 20px;
+		padding: 20px;
+		gap: 20px;
+
+		h2 {
+			margin: 0;
+		}
+		
+		animation-duration: 5s;
+
+		&.DonatePopup {
+			animation-duration: 25s;
+			animation-delay: 45s;
+		}
+		
+		transform: translateY(300px) scale(0.75);
+
+		@keyframes sleep-popup-anim {
+			10% {
+				transform: translateY(-5px) scale(1.05);
+			}
+			
+			20% {
+				transform: none;
+			}
+
+			90% {
+				transform: none;
+			}
+
+			100% {
+				transform: translateY(300px) scale(0.75);
+			}
+		}
+	}
+}
+
 ::-webkit-scrollbar {
 	background: rgba(black, 0.1);
 	width: 5px;

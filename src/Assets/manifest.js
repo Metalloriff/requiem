@@ -1,47 +1,169 @@
-﻿// Import video files
-import audioOcean from "./audio/ocean.ogg";
-// Import audio files
-import audioRain from "./audio/rain.wav";
+﻿import audioOcean from "./audio/ocean.ogg";
+import audioRain from "./audio/rain.ogg";
+import audioHeavyRain from "./audio/heavy-rain.ogg";
 import audioThunderstorm from "./audio/thunderstorm.wav";
+import audioSpringPeepers from "./audio/peepers.wav";
+import audioCrickets from "./audio/crickets.ogg";
+import audioRiver from "./audio/river.mp3";
+import audioCampfire from "./audio/campfire.ogg";
+import audioSnowstorm from "./audio/snow.ogg";
+
 import background from "./background.mp4";
 // Import credits
 import credits from "./credits.json";
 import { ReactComponent as IconOcean } from "./icons/ocean.svg";
-// Import icon files
 import { ReactComponent as IconRain } from "./icons/rain.svg";
+import { ReactComponent as IconHeavyRain } from "./icons/heavy-rain.svg";
 import { ReactComponent as IconThunderstorm } from "./icons/thunderstorm.svg";
+import { ReactComponent as IconPeepers } from "./icons/peepers.svg";
+import { ReactComponent as IconCrickets } from "./icons/crickets.svg";
+import { ReactComponent as IconRiver } from "./icons/river.svg";
+import { ReactComponent as IconCampfire } from "./icons/campfire.svg";
+import { ReactComponent as IconSnowstorm } from "./icons/snow.svg";
+
 import videoOcean from "./video/ocean.webm";
 import videoRain from "./video/rain.webm";
 import videoThunderstorm from "./video/thunderstorm.mp4";
-
-
-
+import videoBlack from "./video/black.mp4";
+import videoMagic from "./video/magic.mp4";
+import videoNight from "./video/night.mp4";
+import videoHearts from "./video/hearts.mp4";
+import videoFish from "./video/fish.mp4";
+import videoMoon from "./video/moon.mp4";
+import videoWaves from "./video/waves.mp4";
+import videoFlowers from "./video/flowers.mp4";
+import videoAbstract from "./video/abstract.mp4";
+import videoSnow from "./video/snow.mp4";
+import videoColors from "./video/colors.mp4";
+import videoNeon from "./video/neon.mp4";
+import videoRainBlack from "./video/rain.mp4";
+import videoMilkway from "./video/milkway.mp4";
+import videoFire from "./video/fire.mp4";
+import videoAbstractRainbow from "./video/abstractrainbow.mp4";
 
 // Export manifest data
 export default {
 	credits,
-	background,
+	background: videoMilkway,
 	sounds: {
 		rain: {
 			name: "Light Rain",
 			colors: ["#aaaaaa", "#5555ff"],
 			audio: audioRain,
-			video: videoRain,
 			Icon: IconRain
+		},
+		heavyRain: {
+			name: "Heavy Rain",
+			colors: ["#505055", "#323299"],
+			audio: audioHeavyRain,
+			Icon: IconHeavyRain
 		},
 		thunderstorm: {
 			name: "Thunderstorm",
 			colors: ["black", "#777777"],
 			audio: audioThunderstorm,
-			video: videoThunderstorm,
 			Icon: IconThunderstorm
+		},
+		snowstorm: {
+			name: "Snowstorm",
+			colors: ["white", "#ddddff"],
+			audio: audioSnowstorm,
+			Icon: IconSnowstorm
 		},
 		ocean: {
 			name: "Ocean Waves",
 			colors: ["#55ffc3", "#55a4ff"],
 			audio: audioOcean,
-			video: videoOcean,
 			Icon: IconOcean
+		},
+		river: {
+			name: "River",
+			colors: ["#f1faf7", "#2c739d"],
+			audio: audioRiver,
+			Icon: IconRiver
+		},
+		peepers: {
+			name: "Spring Peepers",
+			colors: ["#76ff64", "#f5ff64"],
+			audio: audioSpringPeepers,
+			Icon: IconPeepers
+		},
+		crickets: {
+			name: "Crickets, Katydids",
+			colors: ["#ff6937", "#aaff37"],
+			audio: audioCrickets,
+			Icon: IconCrickets
+		},
+		campfire: {
+			name: "Campfire",
+			colors: ["#ef2e08", "#fae908"],
+			audio: audioCampfire,
+			Icon: IconCampfire
 		}
-	}
+	},
+	videos: {
+		snow: {
+			video: videoSnow
+		},
+		rainBlack: {
+			video: videoRainBlack
+		},
+		black: {
+			video: videoBlack
+		},
+		fire: {
+			video: videoFire
+		},
+		abstract: {
+			video: videoAbstract
+		},
+		abstractRainbow: {
+			video: videoAbstractRainbow
+		},
+		hearts: {
+			video: videoHearts
+		},
+		colors: {
+			video: videoColors
+		},
+		neon: {
+			video: videoNeon
+		},
+		milkway: {
+			video: videoMilkway
+		},
+		city: {
+			video: background
+		},
+		rain: {
+			video: videoRain
+		},
+		thunderstorm: {
+			video: videoThunderstorm
+		},
+		ocean: {
+			video: videoOcean
+		},
+		magic: {
+			video: videoMagic
+		},
+		night: {
+			video: videoNight
+		},
+		fish: {
+			video: videoFish
+		},
+		moon: {
+			video: videoMoon
+		},
+		waves: {
+			video: videoWaves,
+		},
+		flowers: {
+			video: videoFlowers,
+		},
+	},
+	defaultPresets: [
+		{"name":"Storm Peepers","state":{"rain":{"isPlaying":false,"volume":"88","distance":"0"},"thunderstorm":{"isPlaying":false,"volume":"24","distance":"93"},"peepers":{"isPlaying":false,"volume":"39","distance":"87"}}}
+	]
 };

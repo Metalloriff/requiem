@@ -12,23 +12,13 @@ export default function LicensesPage() {
                 assets being available, and being royalty free.
             </h3>
             
-            { Object.entries(credits).map(([key, value]) => (
+            { credits.credits.map((value, key) => (
                 <div className="LicenseItem" key={key}>
-                    <h2>{key}</h2>
-                    
-                    { value.audio && (
-                        <h4>
-                            <b>Audio</b> - <a href={value.audio.link}>
-                                {value.audio.title}
-                            </a>
-                        </h4> 
-                    ) }
-
-                    <h4>
-                        <b>Video</b> - <a href={value.video.link}>
-                        {value.video.title}
-                    </a>
-                    </h4>
+					<h4>
+						<a href={value}>
+							{value}
+						</a>
+					</h4>
                 </div>
             )) }
         </div>

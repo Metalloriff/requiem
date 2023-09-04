@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="133.33333px" height="133.33333px" viewBox="0 0 133.33333 133.33333" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M133.333 0L133.333 0L133.333 133.333L0 133.333L0 0L133.333 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="ocean" clip-path="url(#clip_1)">
+    <path d="M133.333 0L133.333 0L133.333 133.333L0 133.333L0 0L133.333 0Z" id="ocean" fill="none" stroke="none" />
+    <path d="M58.3003 52.7436C58.3003 52.7436 67.2798 46.2046 75.6433 46.6429C84.007 47.0813 86.0123 54.196 94.7503 54.6539C103.488 55.1118 110.511 50.0879 110.511 50.0879" id="Vector-Copy-7" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M12.8136 82.6145C12.8136 82.6145 22.2274 76.7178 30.54 77.7384C38.8526 78.7591 40.7319 91.0481 57.6667 82.6145" id="Vector-Copy-8" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M57.8136 82.6145C57.8136 82.6145 67.2273 76.7178 75.54 77.7384C83.8526 78.7591 85.3568 85.9964 94.0415 87.0627C102.726 88.1291 110.082 83.6072 110.082 83.6072" id="Vector-Copy-6" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M13.8646 69.472C13.8646 69.472 23.2784 63.5753 31.591 64.5959C39.9037 65.6166 41.4078 72.8539 50.0926 73.9202C58.7775 74.9866 66.1333 70.4647 66.1333 70.4647" id="Vector-Copy-5" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M41.3991 69.472C41.3991 69.472 50.8129 63.5753 59.1255 64.5959C67.4382 65.6166 68.9423 72.8539 77.6271 73.9202C86.312 74.9866 93.6678 70.4647 93.6678 70.4647" id="Vector-Copy-3" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M19.0497 46.6626C19.0497 46.6626 29.6104 43.2185 37.4292 46.2198C45.248 49.2212 44.9566 56.6073 53.1254 59.7431C61.2944 62.8788 69.5256 60.2708 69.5256 60.2708" id="Vector-Copy" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>
