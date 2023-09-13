@@ -66,7 +66,8 @@ export default function SoundCard({ id, name, audio, Icon, colors = [] }) {
 	}, []);
 
 	React.useEffect(() => {
-		Config.setItem(`currentState.${id}.isPlaying`, isPlaying);
+		if (hasInteracted)
+			Config.setItem(`currentState.${id}.isPlaying`, isPlaying);
 
 		if (!isPlaying) {
 			if (gainNode) {

@@ -2,7 +2,6 @@
 import { Plus } from "react-feather";
 import manifest from "../../Assets/manifest";
 import Config from "../../Classes/Config";
-import { forceUpdate as forceHomeUpdate } from "../../Pages/Home";
 import "./PresetCard.scss";
 
 function tween(start, end, time) {
@@ -31,8 +30,8 @@ export default function PresetCard({ id, state }) {
 
 	const events = {
 		onClick: () => {
-			for (const stateId in Config.data.currentStates) {
-				Config.data.currentStates[stateId].isPlaying = false;
+			for (const stateId in Config.data.currentState) {
+				Config.data.currentState[stateId].isPlaying = false;
 				Config.save();
 			}
 
@@ -42,7 +41,7 @@ export default function PresetCard({ id, state }) {
 				Config.setItem(`currentState.${id}`, itemState);
 			}
 
-			forceHomeUpdate();
+			window.location.reload();
 		}
 	};
 

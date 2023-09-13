@@ -59,6 +59,12 @@ body {
 			filter: blur(0) brightness(0.3);
 		}
 
+		&.Black {
+			.Background {
+				filter: blur(0) brightness(0);
+			}
+		}
+
 		.Foreground {
 			opacity: 0;
 			transform: scale(0.98);

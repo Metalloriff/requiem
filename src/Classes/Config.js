@@ -3,7 +3,7 @@ import manifest from "../Assets/manifest";
 
 export default new class Config {
 	data = {
-		currentStates: {},
+		currentState: {},
 		background: manifest.background,
 		presets: []
 	};

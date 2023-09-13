@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="133.33333px" height="133.33333px" viewBox="0 0 133.33333 133.33333" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M133.333 0L133.333 0L133.333 133.333L0 133.333L0 0L133.333 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="rain" clip-path="url(#clip_1)">
+    <path d="M133.333 0L133.333 0L133.333 133.333L0 133.333L0 0L133.333 0Z" id="rain" fill="none" stroke="none" />
+    <path d="M24 24L88 24L88 88L24 88L24 24Z" id="Rectangle-Copy" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M44 44L108 44L108 108L44 108L44 44Z" id="Rectangle" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M25.1 25L44.3 44.3" id="Vector" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M88.3 24.3L107.9 43.9" id="Vector-2" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M106.4 105.9L88.1 88" id="Vector-3" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M43.8 107.8L24 88.2" id="Vector-4" fill="none" fill-rule="evenodd" stroke="#EBEBEB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>
